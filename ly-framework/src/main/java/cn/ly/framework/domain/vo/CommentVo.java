@@ -1,0 +1,44 @@
+package cn.ly.framework.domain.vo;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.List;
+
+/**
+ * 简要描述
+ *
+ * @author : Rêve
+ * @version : 1.0
+ * @date : 2023/4/9 22:05
+ */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class CommentVo {
+    private Long id;
+    //文章id
+    private Long articleId;
+    //根评论id
+    private Long rootId;
+    //评论内容
+    private String content;
+    //所回复的目标评论的userid
+    private Long toCommentUserId;
+    private String toCommentUserName;
+    //回复目标评论id
+    private Long toCommentId;
+
+    private Long createBy;
+
+    private LocalDateTime createTime;
+
+    private String username;
+    private String avatar;
+
+    private List<CommentVo> children;
+}
+
